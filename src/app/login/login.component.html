@@ -1,0 +1,11 @@
+<form>
+  <div class="text-white container ms-5 p5">
+    <h1>{{aim}}</h1>
+  </div>
+  <div class="container p-5 border mt-5 w-50 text-center" style="height: 320px; background-color: rgba(41, 212, 147, 0.24); border-radius: 25px;">
+      <input name="acno" [(ngModel)]="acno" id="acid" type="text" class="form-control mt-3" [placeholder]="data"><br>
+      <input name="psw" [(ngModel)]="psw" id="pid" type="password" class="form-control mt-3" placeholder="enter password"><br>
+      <button type="submit" (click)="login()" class="btn btn-outline-primary">log in</button>
+      <p class="text-white">new user?<a routerLink="regester">regester</a></p>
+  </div>
+</form>

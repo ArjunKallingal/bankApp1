@@ -1,0 +1,58 @@
+data binding in angular
+-----------------------
+
+ts-component
+html-view
+
+1.one way binding
+    1.1 component to view
+        1.1.1 string interppollate  {{}}
+        1.1.2 property binding      [property]="value"
+
+    1.2 view to component
+        1.2.1 event binting                   (event name)="method name()"
+        1.2.2 event binding using $event      (eventname)="methodname($event)" 
+        1.2.3 event binding using template rendering variable       #variable
+
+2.tow way binding
+    2.1 ngmodel     [(ngmodule)]="value"
+                    formsModule
+
+
+
+Redieraction in angular
+-----------------------
+navigateByUrl       -method used to rediereaction
+
+router              -class
+
+AppRouterModule     -module
+
+
+
+Dependency injection
+--------------------
+-to use a method of class in another class 
+-in contructor
+-steps          access pecifier - public/privet
+                variable
+                class name
+                            privet var:Classname
+
+
+angular Servies
+---------------
+createing service - ng g s (service name)
+
+angular dierectives
+-------------------
+1-strutured dierectives to handles structure datas in view of a component
+    -ngFOr -can dierectly apply in html to acess element from array
+
+
+Form validation in angular
+--------------------------
+we can create form in two way   
+    1-template driven form 
+    2-model t\driven form
+    

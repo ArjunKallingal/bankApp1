@@ -1,0 +1,24 @@
+<h1 class="text-white p-4 ">Welcome {{user}}</h1>
+
+<a style="background: rgba(255, 255, 255, 0.322); border-radius: 35px;text-decoration: none;" class="ms-2 p-2" routerLink="/transation">your transation History</a>
+
+<form >
+    <div class="container p-3 border mt-5 w-50 text-center"
+        style="height: 350px; background-color: rgba(51, 73, 199, 0.384); border-radius: 25px;">
+        <h3 class="text-white">DEPOSITE</h3>
+        <input type="text" name="acno" [(ngModel)]="acno" class="form-control mt-3" placeholder="accound number" id="acid"><br>
+        <input type="password" name="psw" [(ngModel)]="psw" class="form-control mt-3" placeholder="password" id="pid"><br>
+        <input type="text" name="amount" [(ngModel)]="amnt" class="form-control mt-3" placeholder="amound" id="aid"><br>
+        <button type="submit" (click)="deposite()"  class="btn btn-primary">Deposite</button>
+    </div>
+</form>
+<form >
+    <div class="container p-3 border mt-5 w-50 text-center"
+        style="height: 350px; background-color:rgba(51, 73, 199, 0.384) ; border-radius: 25px;">
+        <h3 class="text-white" >WITHDRAW</h3>
+        <input type="text" name="acno1" [(ngModel)]="acno1" class="form-control mt-3" placeholder="accound number" id="acid1"><br>
+        <input type="password" name="psw1" [(ngModel)]="psw1" class="form-control mt-3" placeholder="password" id="pis1"><br>
+        <input type="text" name="amount1" [(ngModel)]="amnt1" class="form-control mt-3" placeholder="amound" id="aid1"><br>
+        <button type="submit" (click)="withdraw()" class="btn btn-primary">Withdraw</button>
+    </div>
+</form>
