@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashBoardComponent } from './dash-board/dash-board.component';
 import { LoginComponent } from './login/login.component';
-import { RegesterComponent } from './regester/regester.component';
+import { RegesterComponent } from './register/regester.component';
 import { TransationComponent } from './transation/transation.component';
 
 const routes: Routes = [

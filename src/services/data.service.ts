@@ -17,7 +17,7 @@ export class DataService {
     1003: { acno: 1003, username: "mega", password: 123, balance: 0, transation:[] },
   }
 
-  regester(acno: any, uname: any, psw: any) {
+  register(acno: any, uname: any, psw: any) {
     var userDeatiles = this.userDeatiles
     if (acno in userDeatiles) {
       return false

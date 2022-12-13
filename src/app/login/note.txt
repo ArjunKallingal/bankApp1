@@ -48,6 +48,7 @@ angular dierectives
 -------------------
 1-strutured dierectives to handles structure datas in view of a component
     -ngFOr -can dierectly apply in html to acess element from array
+    -ngIf  -contiation check in html
 
 
 Form validation in angular
@@ -55,4 +56,33 @@ Form validation in angular
 we can create form in two way   
     1-template driven form 
     2-model t\driven form
-    
+
+        -Reactive form
+        ---------------
+        ReactiveFormsModule -module used to create model form 
+
+                            -group,arry,control
+
+
+        -validation model form
+        ----------------------
+        validation - a class in angular it includes method for apply validation
+
+        -access errors in validation rule 
+                   this.regesterForm.get('uname')?.errors
+                                -valid      -emplty response
+                                -invalid    -content
+
+                    if(this.regesterForm.get('uname')?.errors){     //*ngIf
+
+                    }
+
+
+
+local storage in angular
+------------------------
+
+- store   localStorage.setItem()
+- axxess  localStorage.getItem()
+- delete  localStorage.removeitem()
+
