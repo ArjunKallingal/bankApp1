@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 import { DataService } from 'src/services/data.service';
 
 @Component({
@@ -9,9 +10,16 @@ import { DataService } from 'src/services/data.service';
 })
 export class DashBoardComponent {
 
+  dateandtime:any
+
+  acno:any
+
   user=''
 
-  constructor(private ds:DataService,private fb:FormBuilder) { 
+  constructor(private ds:DataService,private fb:FormBuilder,private router:Router) { 
+
+    this.dateandtime=new Date()
+
     //acess user name
     this.user=this.ds.currentuser
 
@@ -22,7 +30,10 @@ export class DashBoardComponent {
   withdrawForm=this.fb.group({acno1:[''],psw1:[''],amnt1:['']})
 
   ngOnInit():void {
-
+    if(!localStorage.getItem('currentacno')){
+      alert('please login first')
+      this.router.navigateByUrl('')
+    }
   }
 
   deposite(){
@@ -53,6 +64,16 @@ export class DashBoardComponent {
       alert(`${amnt1}is depeted and the balance is ${result}`)
     }
 
+  }
+
+  logout(){
+    localStorage.removeItem('currentuser')
+    localStorage.removeItem('currentacno')
+    this.router.navigateByUrl('')
+  }
+
+  deleteconfim(){
+    this.acno=JSON.parse(localStorage.getItem('currentacno')|| "")
   }
 
 }

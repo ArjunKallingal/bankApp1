@@ -50,6 +50,13 @@ angular dierectives
     -ngFOr -can dierectly apply in html to acess element from array
     -ngIf  -contiation check in html
 
+2-component dierectives
+
+3-Atribute dierectives
+            [ngClass]   -apply class Atribute
+
+
+
 
 Form validation in angular
 --------------------------
@@ -86,3 +93,17 @@ local storage in angular
 - axxess  localStorage.getItem()
 - delete  localStorage.removeitem()
 
+
+
+parent child components communication in angular
+------------------------------------------------
+
+
+
+
+date in angular
+---------------
+
+date    -class
+
+-create an object of class Date to access date time

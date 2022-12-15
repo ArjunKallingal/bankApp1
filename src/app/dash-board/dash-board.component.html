@@ -1,8 +1,12 @@
-<h1 class="text-white p-4 ">Welcome {{user}}</h1>
+ <h1 class="text-white p-4 ">Welcome {{user}}</h1> 
+
+ <p class="text-white p-4 ">{{dateandtime | date:'short'}}</p>
 
 <a style="background: rgba(255, 255, 255, 0.322); border-radius: 35px;text-decoration: none;" class="ms-2 p-2" routerLink="/transation">your transation History</a>
 
-<form [formGroup]="depositeForm">
+<app-deleteconfim [item]="acno"></app-deleteconfim>
+
+<form [ngClass]="acno?'style':''" [formGroup]="depositeForm">
     <div class="container p-3 border mt-5 w-50 text-center"
         style="height: 350px; background-color: rgba(51, 73, 199, 0.384); border-radius: 25px;">
         <h3 class="text-white">DEPOSITE</h3>
@@ -12,7 +16,7 @@
         <button type="submit" (click)="deposite()"  class="btn btn-primary">Deposite</button>
     </div>
 </form>
-<form [formGroup]="withdrawForm">
+<form [ngClass]="acno?'style':''" [formGroup]="withdrawForm">
     <div class="container p-3 border mt-5 w-50 text-center"
         style="height: 350px; background-color:rgba(51, 73, 199, 0.384) ; border-radius: 25px;">
         <h3 class="text-white" >WITHDRAW</h3>
@@ -22,3 +26,6 @@
         <button type="submit" (click)="withdraw()" class="btn btn-primary">Withdraw</button>
     </div>
 </form>
+<button type="submit" (click)="logout()" class="btn btn-primary" style="margin-top: -1650px; margin-left: 1150px;">log out</button>
+
+<button type="submit" (click)="deleteconfim()" class="btn btn-primary" style="margin-top: -1550px; margin-left: 1150px;"> Delete</button>

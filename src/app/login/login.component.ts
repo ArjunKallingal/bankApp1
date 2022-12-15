@@ -22,7 +22,7 @@ export class LoginComponent {
 
   constructor(private router:Router,private ds:DataService,private fb:FormBuilder){}
 
-  loginForm=this.fb.group({acno:['',[Validators.required,Validators.pattern('[a-zA-z]+')]],psw:['',[Validators.required,Validators.pattern('[0-9]+')]]})
+  loginForm=this.fb.group({acno:['',[Validators.required,Validators.pattern('[0-9]+')]],psw:['',[Validators.required,Validators.pattern('[0-9]+')]]})
 
   ngOnInit():void{
     
